@@ -1,8 +1,14 @@
 <h1>Welcome</h1>
 
 <% if user_signed_in? %>
-  <li>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <li class = "btn btn-default">
+    <%= link_to 'Ingresar como Usuario'%>
+  </li>
+  <li class = "btn btn-default">
+    <%= link_to 'Ingresar como Banda'%>
+  </li>
+  <li class = "btn btn-default">
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   </li>
 <% else %>
   <li>
