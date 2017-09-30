@@ -1,7 +1,15 @@
+<div class="btn-group" role="group" aria-label=".">
+  <button type="button" class="btn btn-default">Home</button>
+  <button type="button" class="btn btn-default">Genres</button>
+  <button type="button" class="btn btn-default">Comments</button>
+</div>
+
 <h1>Welcome</h1>
 
+<%= link_to 'Rock' %>
+
 <% if user_signed_in? %>
-  <li>
+  <li class="btn btn-info">
   <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   </li>
 <% else %>
