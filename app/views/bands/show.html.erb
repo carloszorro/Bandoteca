@@ -1,0 +1,12 @@
+<h1>Bienvenido <%= @band.name %></h1>
+<img src="<%= @band.url_image %>" alt="">
+<ul>
+  <li>Tu Genero actual es: <%= @band.genre %></li>
+  <li>Tu Tarifa actual es: <%= @band.rate %></li>
+  <li>Tu Calificacion actual es: <%= @band.popularity %></li>
+  <li>Tu Telefono de contacto actual es: <%= @band.phone %></li>
+  <li>Tu Email actual es: <%= @band.email %></li>
+  <li>Tu descripcion actual es: <%= @band.description %></li>
+</ul>
+<%= link_to "Edit", edit_band_path(@band) %>
+<%= link_to "Volver", root_path%>

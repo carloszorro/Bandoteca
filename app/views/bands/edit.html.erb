@@ -1,0 +1,42 @@
+<h1>Editor de Banda</h1>
+
+<%= form_for @band, url: {action: "update"} do |f| %>
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Band_Name %><br />
+    <%= f.text_field :name%>
+  </div>
+
+  <div class="field">
+    <%= f.label :Genre %>
+    <%= f.text_field :genre%>
+  </div>
+
+  <div class="field">
+    <%= f.label :Rate %>
+    <%= f.number_field :rate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+	<%= f.label :Phone %>
+	<%= f.telephone_field :phone %>
+  </div>
+
+  <div class="field">
+	<%= f.label :Image_url%>
+	<%= f.text_field :url_image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "submit" %>
+  </div>
+<% end %>

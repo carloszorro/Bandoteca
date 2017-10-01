@@ -4,9 +4,16 @@
   <li class = "btn btn-default">
     <%= link_to 'Ingresar como Usuario'%>
   </li>
-  <li class = "btn btn-default">
-    <%= link_to 'Ingresar como Banda'%>
-  </li>
+  <% if current_user.band != nil %>
+    <li class = "btn btn-default">
+      <%= link_to 'Ingresar como Banda', @band%>
+    </li>
+  <% else %>
+    <li class = "btn btn-default">
+	  <%= link_to 'Crear mi Banda', new_band_path%>
+    </li>
+  <%end%>
+
   <li class = "btn btn-default">
     <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
   </li>
