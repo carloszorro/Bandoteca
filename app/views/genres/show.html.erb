@@ -13,7 +13,7 @@
     </li>
   </ul>
   <p class="review text-justify">
-    <small> <%= band.review %> </small>
+    <medium> <%= band.review %> </medium>
   </p>
 
 
@@ -22,7 +22,7 @@
   <%= form_for @reservations, url: reservations_path do |f| %>
 
     <div class="form-group">
-      <%= f.label :date %><br>
+      <%= f.label :date, class:"date" %><br>
       <%= f.date_field :date %>
     </div>
 

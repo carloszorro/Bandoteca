@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def new
     @Comment = Comment.new
   end
@@ -9,6 +10,8 @@ class CommentsController < ApplicationController
     @Comment.save
     redirect_to comments_path
   end
+
+private
 
   def comment_params
     params.require(:comment).permit(:date, :name, :comment)

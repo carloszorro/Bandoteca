@@ -14,6 +14,22 @@
  *= require_self
  */
 
+body {
+  background: url("http://www.planwallpaper.com/static/images/background-presentations-powerpoint-backgrounds.jpg");
+  background-size: cover;
+}
+
+h1 {
+  font-family: Georgia, fantasy, arial;
+  color: lightblue;
+  font-size: 60px;
+}
+
+h2 {
+  font-family: Georgia, fantasy, arial;
+  color: lightblue;
+}
+
 .genre {
 margin: 10px;
 cursor: grab;
@@ -21,10 +37,15 @@ cursor: grab;
 
 .review {
   margin: 20px 180px;
+  color: white;
 }
 
 .admin {
   cursor: progress;
+}
+
+.login {
+  color: white;
 }
 
 .logout {
@@ -35,6 +56,7 @@ cursor: grab;
 .info_band {
   list-style: none;
   margin-left: -40px;
+  color: white;
 }
 
 .delete {
@@ -46,4 +68,22 @@ cursor: grab;
   width: 200px;
   margin-bottom: 10px;
   margin-left: 540px;
+}
+
+.new_band {
+  color: white;
+  margin-top: 20px;
+}
+
+.new_band_field {
+  color: black;
+}
+
+.create_band {
+  color: blue;
+  margin-bottom: 10px;
+}
+
+.date {
+  color: lightblue;
 }

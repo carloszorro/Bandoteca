@@ -13,10 +13,11 @@
 </head>
 
   <body class="text-center">
+
     <div class="btn-group" role="group" aria-label=".">
       <%= link_to 'Home', root_path, class:"btn btn-primary"%>
       <%= link_to 'Reservations', reservations_path, class:"btn btn-primary"%>
-      <%= link_to 'Comments', root_path, class:"btn btn-primary" %>
+      <%= link_to 'Comments', new_comment_path, class:"btn btn-primary" %>
     </div>
     <%= yield %>
     <% if user_signed_in? %>
