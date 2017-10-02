@@ -1,21 +1,22 @@
-<div class="btn-group" role="group" aria-label=".">
-  <button type="button" class="btn btn-default">Home</button>
-  <button type="button" class="btn btn-default">Genres</button>
-  <button type="button" class="btn btn-default">Comments</button>
-</div>
-
 <h1>Welcome</h1>
 
-<%= link_to 'Rock' %>
+<% @genres.each do |genre| %>
 
-<% if user_signed_in? %>
-  <li class="btn btn-info">
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>
-  </li>
+<div class="welcome_genre">
+    <img class="img-responsive img-rounded img-thumbnail" width="200" height="200"
+    src="<%= genre.image_url_genre %>"
+    alt="Rock"><br>
+
+    <%= link_to genre.name_genre, genre_path(genre),
+    class:"genre btn-xs btn btn-primary col-md-offset-4" %> <br>
+
+<div class="col-xs-12">
+
+</div>
+<% end %>
+
+<% if current_user.admin %>
+<%= link_to 'genres', new_genre_path, class:"admin btn btn-info" %>
 <% end %>
 
 <!-- carpeta de layouts-->
