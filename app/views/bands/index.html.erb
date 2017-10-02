@@ -1,10 +1,13 @@
 <h1>Aca encontraras todas nuestras bandas</h1>
-<%= link_to "Volver", root_path%>
+<%= link_to "Volver", root_path%><br />
+<%= link_to "Administrar reservas", reservations_path %>
+<section>
 <% @bands.each do |band| %>
   <%if band.name != nil%>
-    <img src="<%= band.url_image %>" alt="">
+    <img src="<%= band.url_image %>" alt="" class = "band">
     <h2><%= band.name %></h2>
     <h2><%= band.rate %></h2>
-  <%= link_to "Reservar Banda", band%>
+  <%= link_to "Reservar Banda", new_reservation_path(band.id)%>
   <% end %>
 <% end %>
+</section>

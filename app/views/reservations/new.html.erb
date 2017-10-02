@@ -1,4 +1,4 @@
-<h1>Bienvenido <%= @band.name %></h1>
+<h1><%= @band.name %></h1>
 <img src="<%= @band.url_image %>" alt="" class="band">
 <ul>
   <li>Tu Genero actual es: <%= @band.genre %></li>
@@ -8,6 +8,19 @@
   <li>Tu Email actual es: <%= @band.email %></li>
   <li>Tu descripcion actual es: <%= @band.description %></li>
 </ul>
-<%= link_to "Delete Band", @band, method: :delete%>
-<%= link_to "Edit", edit_band_path(@band) %>
-<%= link_to "Volver", root_path%>
+<%= form_for @reservation, url: {action: "create"} do |f| %>
+<%=f.hidden_field :band_id, value:@band.id%>
+<div class="field">
+  <%= f.label :Fecha_de_Reserva %><br />
+  <%= f.date_field :date%>
+</div>
+
+<div class="field">
+  <%= f.label :Duración %><br />
+  <%= f.number_field :duration%>
+</div>
+
+<div class="actions">
+  <%= f.submit "Realizar Reserva" %>
+</div>
+<% end %>

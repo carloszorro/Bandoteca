@@ -1,3 +1,15 @@
 // Place all the styles related to the Bands controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h2,a{
+	margin: 0 10% 0 10%;
+	font-size: 24px;
+}
+img.band{
+    border: 2px;
+	width: 80%;
+	height: 150px;
+	position: relative;
+	display: inline_block;
+	margin: 0 10% 0 10%
+ }

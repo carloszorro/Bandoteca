@@ -1,0 +1,21 @@
+<h1>Editor de Reservas</h1>
+<%= form_for @reservation, url: {action: "update"} do |f| %>
+<div class="field">
+  <%= f.label :Fecha_de_Reserva %><br />
+  <%= f.date_field :date%>
+</div>
+
+<div class="field">
+  <%= f.label :Duración %><br />
+  <%= f.number_field :duration%>
+</div>
+
+<div class="actions">
+  <%= f.submit "Editar Reserva" %>
+</div>
+
+<div class="btn btn-default">
+  <%= link_to "Delete Reservation", reservation_path(@reservation), method: :delete%>
+</div>
+
+<% end %>

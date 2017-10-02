@@ -13,25 +13,35 @@
  *= require_tree .
  *= require_self
  */
- body{
-  min-height: 100%;
-  width: 640px;
-  margin: 0;
-  background-color: #F7F2E0
-}
-
-img{
-    border: 2px;
-	width: 80%;
-	height: 150px;
-	position: relative;
-	display: inline_block;
-	margin: 0 10% 0 10%
+ html{
+	 background-color: white;
  }
 
+ body{
+	 height: 640px;
+     width: 360px;
+     border: 2px solid black;
+     background-color: #F7F2E0;
+	 background-size: contain;
+	 position: relative;
+	 top: 0;
+	 overflow: auto;
+}
+
+section{
+	width: 100%;
+	height: 68%;
+	overflow-y: scroll;
+}
+
+h1{
+    font-size: 24px;
+}
+
  li{
+	 width: 80%;
 	 display: block;
-	 position: relative
+	 position: relative;
  }
 
 
@@ -45,7 +55,7 @@ nav{
 
 nav>button{
   height: 100%;
-  width: 100px;
+  width: 80px;
   background-color: #FFBF00;
   font-size: 24px;
   color: #848484;

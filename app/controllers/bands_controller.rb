@@ -1,6 +1,7 @@
 class BandsController < ApplicationController
     def index
       @bands = Band.all
+	  @reservations = current_user.reservations
 	end
 
 	def new

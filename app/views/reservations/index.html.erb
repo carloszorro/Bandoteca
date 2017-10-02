@@ -1,0 +1,10 @@
+<h1>Estas son tus Reservas</h1>
+<%= link_to "Volver a Bandas", bands_path%>
+<% @reservations.each do |reservation| %>
+  <%if reservation.date != nil%>
+    <h2></h2>
+    <h2>Fecha de Reserva<%= reservation.date %></h2>
+    <h2>Duracion: <%= reservation.duration %> Horas</h2>
+  <%= link_to "Editar Reserva", edit_reservation_path(reservation.id)%>
+  <% end %>
+<% end %>
