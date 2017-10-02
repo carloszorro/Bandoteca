@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   }
   get "/users/index" => "users#index"
   resources :bands
+  resources :reservations
 
   root to: "welcome#index"
 

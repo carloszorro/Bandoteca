@@ -8,5 +8,6 @@
   <li>Tu Email actual es: <%= @band.email %></li>
   <li>Tu descripcion actual es: <%= @band.description %></li>
 </ul>
+<%= link_to "Delete Band", @band, method: :delete%>
 <%= link_to "Edit", edit_band_path(@band) %>
 <%= link_to "Volver", root_path%>

@@ -1,1 +1,10 @@
-<%=%>
+<h1>Aca encontraras todas nuestras bandas</h1>
+<%= link_to "Volver", root_path%>
+<% @bands.each do |band| %>
+  <%if band.name != nil%>
+    <img src="<%= band.url_image %>" alt="">
+    <h2><%= band.name %></h2>
+    <h2><%= band.rate %></h2>
+  <%= link_to "Reservar Banda", band%>
+  <% end %>
+<% end %>

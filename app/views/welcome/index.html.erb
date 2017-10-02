@@ -1,9 +1,11 @@
 <h1>Welcome</h1>
 
 <% if user_signed_in? %>
+
   <li class = "btn btn-default">
-    <%= link_to 'Ingresar como Usuario'%>
+    <%= link_to 'Ingresar como Usuario', bands_path %>
   </li>
+
   <% if current_user.band != nil %>
     <li class = "btn btn-default">
       <%= link_to 'Ingresar como Banda', @band%>

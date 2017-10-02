@@ -1,6 +1,6 @@
 class BandsController < ApplicationController
     def index
-
+      @bands = Band.all
 	end
 
 	def new
@@ -24,9 +24,16 @@ class BandsController < ApplicationController
 
 	def update
       @band = Band.find(params[:id])
-	  @band.update(band_params) 
+	  @band.update(band_params)
 	  redirect_to @band
 	end
+
+	def destroy
+	  @band = Band.find(params[:id])
+	  @band.destroy
+	  redirect_to root_path
+	end
+
     private
 
 	def band_params
