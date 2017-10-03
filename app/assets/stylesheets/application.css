@@ -30,9 +30,19 @@ h2 {
   color: lightblue;
 }
 
+.genre_new {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.genre_new_field {
+  margin-bottom: 30px;
+}
+
 .genre {
-margin: 10px;
-cursor: grab;
+  margin: 10px;
+  cursor: grab;
 }
 
 .review {
@@ -46,6 +56,10 @@ cursor: grab;
 
 .login {
   color: white;
+}
+
+.login_field {
+  margin-left: 5000px;
 }
 
 .logout {

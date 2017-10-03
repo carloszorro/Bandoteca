@@ -1,12 +1,12 @@
 <%= form_for @genre, url: {action: "create"} do |f| %>
   <p>
-    <%= f.label :name_genre %><br>
-    <%= f.text_field :name_genre %>
+    <%= f.label :name_genre, class:"genre_new" %><br>
+    <%= f.text_field :name_genre, class:"genre_new_field" %>
   </p>
 
   <p>
-    <%= f.label :image_url_genre %><br>
-    <%= f.text_field :image_url_genre %>
+    <%= f.label :image_url_genre, class:"genre_new" %><br>
+    <%= f.text_field :image_url_genre, class:"genre_new_field" %>
   </p>
 
   <p>

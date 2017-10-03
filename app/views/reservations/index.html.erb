@@ -17,8 +17,7 @@
 
 </div>
 
-<% if current_user.admin %>
   <%= link_to 'delete', reservation_path(reservation), method: :delete,
       class:"delete btn btn-info" %><br>
-  <% end %>
+
 <% end %>

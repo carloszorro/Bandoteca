@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @Comment = Comment.create(comment_params)
 
     @Comment.save
-    redirect_to comments_path
+    redirect_to new_comment_path
   end
 
 private
